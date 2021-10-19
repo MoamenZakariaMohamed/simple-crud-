@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task7.css">
+    <title>task7</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-items">
+        <h1>payment form</h1>
+        <h5>requird fildes are followed by *_</h5>
+        <h2>contact infromation</h2>
+        <form class="login" id="login" class="login">
+            <fieldset>
+                <legend>title</legend>
+                <input type="radio" name="gender" id="contactChoice1" value="mister" class="gender">
+                <label>mister</label>
+                <input type="radio" name="gender" id="contactChoice2" value="miss" class=" gender">
+                <label>miss</label>
+            </fieldset>
+            <label> name:-</label>
+            <input type="text" id="username" required="" placeholder="username">
+            
+            <label> e-mail:-</label>
+            <input type="email" id="email" required="" placeholder="email">
+            
+            <label> password:-</label>
+            <input type="password" id="password" required="" placeholder="password">
+
+            <label>save data to use
+            <input type="checkbox" id="cheack"> </label>
+            <button id="btn" onclick="store()"> save data</button>
+
+        </form>
+        <div id="res">
+            
+        </div>
+     </div>
+    </div>
+<script src="task7.js"></script>
+</body>
+</html> -->
+
+<html>
+
+<head>
+
+    <!--bootstrap links--> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"></head>
+
+<body>
+    <div class="w-75 m-auto py-4">
+
+        <div class="form-group">
+            <label for="Name">Name :</label>
+            <input type="text" class="form-control" id="adminName" placeholder="your name" required>
+
+        </div>
+   
+        <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input type="text" class="form-control" id="email" placeholder="your e-mail" required>
+
+        </div>
+
+        <div class="form-group">
+            <label for="job">Your job :</label>
+            <input   type="text" class="form-control" id="job" placeholder="your curent job" required>
+
+        </div>
+
+       
+
+        <button onclick="addInfo()" class="btn btn-outline-secondary m-4"> save info </button>
+        <button class="btn btn-outline-dark" id="saveProduct" onclick="saveEdit()" style="display: none;">Save Edit</button>
+
+    </div>
+        <div class="w-50 m-auto p-5 ">
+            <input onkeyup="searchInfo(this.value)" type="text" class="form-control" placeholder="Search" >
+        </div>
+    <table class="table  table-striped w-75 m-auto" id="tbody-row">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">job</th>
+           
+            <th scope="col">Update</th>
+            <th scope="col">delete</th>
+
+
+
+          </tr>
+        </thead>
+        <tbody class="tableBody">
+
+        </tbody>
+      </table>
+
+
+    <script src="task7.js"></script>
+</body>
+
+</html>
