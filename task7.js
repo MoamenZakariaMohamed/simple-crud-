@@ -1,63 +1,4 @@
 
-
-// var userArray=[];
-
-// if (localStorage.getItem(`userList`)!=null) {
-  
-//   userArray=JSON.parse(localStorage.getItem("userList"));
-//   addTable(userArray)
-// }
-
-// function store() {
-  
-// var uName=document.getElementById("username").value;
-// var uEmail=document.getElementById("email").value;
-// var uGender=document.querySelectorAll("input[name=gender]");
-
-// var userObj={uname:uName , uemail:uEmail, ugender:uGender , ucheack:uCheack};
- 
-  
-//   userArray.push(userObj)
-//   addTable(userArray);
-
-//     var objString=JSON.stringify(userArray);
-//     localStorage.setItem('userList' , objString);
-//     var uName=document.getElementById("username").value="";
-//     var uEmail=document.getElementById("email").value="";
-// }
-//     function addTable(userList){
-
-//     var tb = "<table border=1>"
-
-//     tb+= "<tr><th>Name</th>" + "<th>e-mail</th>"+"<th>card</th>"+ "<th>cheack-box</th>"+"<th>delete</th></tr>"
-//   for (let index = 0; index < userList.length; index++) { 
-//     tb+=`<tr><td>${userList[index].uname}</td><td>${userList[index].uemail}</td><td>${userList[index].ucard}</td>
-//     <td>${userList[index].ucheack}</td><td><img src='download.jfif' style='width:40px'; onclick='edit(${index})'><img src='delet.PNG' style='width:40px'; onclick='deletItem(${index})'></td></tr>`
-
-//   }
-//      tb+=`</table>`
-//      document.getElementById(`res`).innerHTML=tb
-//   }
-//   function deletItem(userDelete) {
-
-//      if (confirm(`delete${userArray[userDelete].uname}?`)) {
-//        userArray.splice(userDelete,1);
-//        addTable(userArray)
-//        localStorage.setItem('userList',objString);
-//      }  
-//     }
-//     function edit(userEdit) {
-      
-//       document.getElementById("username").value=userArray[userEdit].uName;
-//       document.getElementById("email").value=userArray[userEdit].uEmail;
-//       var uGender=document.querySelectorAll("input[name=gender]");
-//         uGender.forEach(function (x) {
-//           if (x.value==userArray[userEdit].uGender) {
-//             x.checked=true
-//           }
-//         })
-      
-//     }
 var admiNameInput=document.getElementById("adminName");
 var emailInput=document.getElementById("email");
 var adminJobInput=document.getElementById("job");
@@ -98,7 +39,7 @@ function displayInfo(){
 
         
         <td>${productsContainer[i].name}</td>
-        <td>${productsContainer[i].price}</td>
+        <td>${productsContainer[i].email}</td>
         <td>${productsContainer[i].job}</td>
         <td><img src='download.jfif' style='width:40px'; onclick='updateInfo(${i})'></td>
         <td><img src='delet.PNG' style='width:40px' background-color:'black'; onclick='deleteInfo(${i})'></td>`
@@ -115,8 +56,8 @@ function searchInfo(term){
             productList += `<tr>
             
             <td>${productsContainer[i].name}</td>
-            <td>${productsContainer[i].price}</td>
-            <td>${productsContainer[i].category}</td>
+            <td>${productsContainer[i].email}</td>
+            <td>${productsContainer[i].job}</td>
             <td><button onclick="updateInfo(${i})" class="btn btn-outline-dark">Update</button></td>
             <td><button onclick="deleteInfo(${i})" class="btn btn-outline-primary">Delete</button></td>
         </tr>`
@@ -135,8 +76,8 @@ function deleteInfo(index){
 function updateInfo(index){
 
     admiNameInput.value = productsContainer[index].name;
-    emailInput.value = productsContainer[index].price;
-     adminJobInput.value = productsContainer[index].category;
+    emailInput.value = productsContainer[index].email;
+     adminJobInput.value = productsContainer[index].job;
      updateIndex=index;
      document.getElementById("saveProduct").style.display="inline"
 }
